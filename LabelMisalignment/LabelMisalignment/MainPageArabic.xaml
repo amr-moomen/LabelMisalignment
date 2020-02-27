@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"           
+             mc:Ignorable="d"
+             x:Class="LabelMisalignment.MainPageArabic"
+             FlowDirection="RightToLeft"
+            >
+
+    <StackLayout  Margin="10, 10, 10, 0" Padding="10, 10, 10, 0">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition  Width="90"/>
+                <ColumnDefinition  Width="*"/>
+
+            </Grid.ColumnDefinitions>
+            <Label Grid.Row="0" Grid.Column="0" Text="  " Label.TextColor="Black" HorizontalOptions="Center" />
+            <Label Grid.Row="1" Grid.Column="0"  x:Name="Usernamelabel" Text=" اسم المستخدم" Label.TextColor="Black"  HorizontalTextAlignment="Start" HorizontalOptions="Start"/>
+            <Entry Grid.Row="1" Grid.Column="1"  x:Name="usernameEntry" Text="" VisualElement.BackgroundColor="White" Entry.TextColor="Black"  ReturnType="Next"  HorizontalOptions="Start" HorizontalTextAlignment="Start" WidthRequest="350"/>
+            <Label Grid.Row="2" Grid.Column="0"   x:Name="Addresslabel" Text="العنوان" Label.TextColor="Black"  HorizontalOptions="Start"/>
+            <Entry Grid.Row="2" Grid.Column="1"  x:Name="AddressEntry" VisualElement.BackgroundColor="White" Placeholder=""  Entry.TextColor="Black"  HorizontalOptions="Start" HorizontalTextAlignment="Start"  WidthRequest="350"/>
+            <Label Grid.Row="3" Grid.Column="0"   x:Name="Genderlabel" Text="الحالة العسكرية / خدمه عامة" Label.TextColor="Black"  HorizontalOptions="Start"/>
+            <Picker  Grid.Row="3" Grid.Column="1"  x:Name="GenderPicker"  ></Picker>
+            <Button Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2" Text="تغيير اللغه" Clicked="ChangeLangugeClicked"></Button>
+        </Grid>
+    </StackLayout>
+
+
+
+</ContentPage>
